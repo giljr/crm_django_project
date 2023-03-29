@@ -6,7 +6,12 @@ Hi, this is CRM APP: I am taking this course from [Dennis Ivy](https://www.linke
 
 ## What exactly is CRM?
 ```
-Customer relationship management (CRM) is a technology for managing all your company's relationships and interactions with customers and potential customers. The goal is simple: Improve business relationships. A CRM system helps companies stay connected to customers, streamline processes, and improve profitability.
+Customer relationship management (CRM) is a technology for managing
+all your company's relationships and interactions with customers and 
+potential customers. The goal is simple: Improve business relationships.
+
+A CRM system helps companies stay connected to customers, 
+streamline processes, and improve profitability.
 ```
 
 This is powered by [Django](https://www.djangoproject.com/) , a web framework for perfectionists with deadlines!
