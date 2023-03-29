@@ -1,15 +1,15 @@
 # crm_django_project
 
-Hi, this is all about [Django](https://www.djangoproject.com/) , a web framework for perfectionists with deadlines!
-
-Django is a full-stack, open-source Python framework designed for efficient web development.
-
-This is learning by doing: I am this course from [Dennis Ivy](https://www.linkedin.com/in/dennis-ivanov/):
+Hi, this is CRM APP: I am taking this course from [Dennis Ivy](https://www.linkedin.com/in/dennis-ivanov/):
 
 > Django (3.0) (Crash Course Tutorials | Customer Management App)[https://www.youtube.com/playlist?list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO]
 
 ## What exactly is CRM?
 Customer relationship management (CRM) is a technology for managing all your company's relationships and interactions with customers and potential customers. The goal is simple: Improve business relationships. A CRM system helps companies stay connected to customers, streamline processes, and improve profitability.
+
+This is all about [Django](https://www.djangoproject.com/) , a web framework for perfectionists with deadlines!
+
+Django is a full-stack, open-source Python framework designed for efficient web development.
 
 Why Django?
 ```
