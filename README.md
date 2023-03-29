@@ -2,7 +2,7 @@
 
 Hi, this is CRM APP: I am taking this course from [Dennis Ivy](https://www.linkedin.com/in/dennis-ivanov/):
 
-> (Django (3.0) (Crash Course Tutorials | Customer Management App)[https://www.youtube.com/playlist?list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO]
+> Django (3.0) (Crash Course Tutorials | Customer Management App
 
 ## What exactly is CRM?
 ```
