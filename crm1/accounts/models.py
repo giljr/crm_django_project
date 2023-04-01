@@ -47,4 +47,4 @@ class Order(models.Model):
     status = models.CharField(max_length=200, null=True, choices=STATUS)
 
     def __str__(self):
-        return f'{self.customer.name} Order'
+        return f"From: [{self.customer.name}] Product: [{self.product.name}]"
