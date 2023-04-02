@@ -86,6 +86,7 @@
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST" action="">
+                        {% csrf_token %}
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -105,6 +106,9 @@
 					</form>
 
 				</div>
+				{% for message in messages %}
+					<p class="messages">{{message}}</p>
+				{% endfor %}
 		
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
@@ -115,23 +119,7 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		/* 
-		Because I didnt set placeholder values in  forms.py 
-		they will be set here using vanilla javaScript
 
-		We start indexing at one because CSRF_TOKEN is considered an input field.
-		*/
-		var form_fields = documents.getElementeByTagName('input')
-		form_fields[1].placeholder='Username...';
-		form_fields[1].placeholder='email...';
-		form_fields[1].placeholder='Enter Password...';
-		form_fields[1].placeholder='Re-enter passwod...';
-
-		for (var field in form_fields){
-			form_fields[field].className += 'form-control'
-		}	
-	</script>
 </body>
 
 </html>
