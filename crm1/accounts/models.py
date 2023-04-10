@@ -1,7 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Customer(models.Model):
+    user = models.OneToOneField(
+        User, null=True, blank=True, on_delete=models.CASCADE)
+    profile_pic = models.ImageField(
+        default='default.jpg')
     name = models.CharField(max_length=200, null=True)
     phone = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
@@ -41,10 +46,11 @@ class Order(models.Model):
         ('Delivered', 'Delivered')
     )
     customer = models.ForeignKey(
-        Customer, null=True, on_delete=models.SET_NULL)
-    product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
+        Customer, null=True, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=True, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField(max_length=200, null=True, choices=STATUS)
+    note = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return f"From: [{self.customer.name}] Product: [{self.product.name}]"

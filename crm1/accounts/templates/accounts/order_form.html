@@ -1,14 +1,22 @@
 {% extends 'accounts/base.html' %}
+{% load static %}
 {% block content %}
+
 <div class="row">
-    <div class="col-md-6">
-        <div class="card card-body">
-            <form method="POST">
-                {% csrf_token %}
-                {{form.as_p}}
-                <input type="submit" name="Submit">
-            </form>
-        </div>
-    </div>
+	<div class="col-md-6">
+		<div class="card card-body">
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{form.management_form}}
+				{% for form in form %}
+				  {{form}}
+				  <hr>
+				{% endfor %}
+				<input type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
 </div>
-{% endblock content %}
+
+{% endblock %}

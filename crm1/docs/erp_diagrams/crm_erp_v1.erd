@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="crm_erp_v1.erd">
+	<entities>
+		<data-source id="sqlite_jdbc-1872f5a8b07-4a9e9676100f1f57">
+			<entity id="1" name="accounts_customer" fq-name="accounts_customer" order="0" x="692" y="551"/>
+			<entity id="2" name="accounts_order" fq-name="accounts_order" order="1" x="694" y="383"/>
+			<entity id="3" name="accounts_product" fq-name="accounts_product" order="2" x="690" y="197"/>
+			<entity id="4" name="auth_group" fq-name="auth_group" order="3" x="281" y="33"/>
+			<entity id="5" name="auth_group_permissions" fq-name="auth_group_permissions" order="4" x="13" y="19"/>
+			<entity id="6" name="auth_permission" fq-name="auth_permission" order="5" x="35" y="181"/>
+			<entity id="7" name="auth_user" fq-name="auth_user" order="6" x="516" y="421"/>
+			<entity id="8" name="auth_user_groups" fq-name="auth_user_groups" order="7" x="484" y="19"/>
+			<entity id="9" name="auth_user_user_permissions" fq-name="auth_user_user_permissions" order="8" x="253" y="198"/>
+			<entity id="10" name="django_admin_log" fq-name="django_admin_log" order="9" x="34" y="462"/>
+			<entity id="11" name="django_content_type" fq-name="django_content_type" order="10" x="27" y="323"/>
+			<entity id="12" name="django_migrations" fq-name="django_migrations" order="11" x="902" y="11"/>
+			<entity id="13" name="django_session" fq-name="django_session" order="12" border-width="3" x="918" y="166"/>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_accounts_order_accounts_customer" fq-name="accounts_order.FK_accounts_order_accounts_customer" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="FK_accounts_order_accounts_product_2" fq-name="accounts_order.FK_accounts_order_accounts_product_2" type="fk" pk-ref="3" fk-ref="2"/>
+		<relation name="FK_auth_group_permissions_auth_group" fq-name="auth_group_permissions.FK_auth_group_permissions_auth_group" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="FK_auth_user_groups_auth_group" fq-name="auth_user_groups.FK_auth_user_groups_auth_group" type="fk" pk-ref="4" fk-ref="8"/>
+		<relation name="FK_auth_group_permissions_auth_permission_2" fq-name="auth_group_permissions.FK_auth_group_permissions_auth_permission_2" type="fk" pk-ref="6" fk-ref="5"/>
+		<relation name="FK_auth_user_user_permissions_auth_permission" fq-name="auth_user_user_permissions.FK_auth_user_user_permissions_auth_permission" type="fk" pk-ref="6" fk-ref="9"/>
+		<relation name="FK_auth_user_groups_auth_user_2" fq-name="auth_user_groups.FK_auth_user_groups_auth_user_2" type="fk" pk-ref="7" fk-ref="8"/>
+		<relation name="FK_auth_user_user_permissions_auth_user_2" fq-name="auth_user_user_permissions.FK_auth_user_user_permissions_auth_user_2" type="fk" pk-ref="7" fk-ref="9"/>
+		<relation name="FK_django_admin_log_auth_user" fq-name="django_admin_log.FK_django_admin_log_auth_user" type="fk" pk-ref="7" fk-ref="10"/>
+		<relation name="FK_auth_permission_django_content_type" fq-name="auth_permission.FK_auth_permission_django_content_type" type="fk" pk-ref="11" fk-ref="6"/>
+		<relation name="FK_django_admin_log_django_content_type_2" fq-name="django_admin_log.FK_django_admin_log_django_content_type_2" type="fk" pk-ref="11" fk-ref="10"/>
+	</relations>
+</diagram>
